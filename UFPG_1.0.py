@@ -41,8 +41,14 @@ def tutorial():
         q2 = make_choices("11", "13", '7')
         if q2 == '11':
             say('                                                   safe.')
+            say('hey didya make it?\nyes?\nok then')
+            say('ok we escaped')
+            say('OMG that must be!')
+            print('H.H.')
+            print('#will commit changes soon')
         else:
             say('                                                       NOT SAFE')
+            say('hey, you there? i heard some death sounds there\nHello? Hello?')
             game_over()
     else:
         say('                                                       NOT SAFE')

@@ -3,7 +3,7 @@ cmd 관리자모드
 
 cd "C:\Users\danie\OneDrive\Desktop\게임"
 
-python -m PyInstaller -F -w UFPG_1.0.py
+python -m PyInstaller -w -F --icon="pypy.ico" UFPG_1.0.py
 
 dist 폴더에서 실행파일 가져오기
 '''

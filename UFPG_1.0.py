@@ -3,7 +3,7 @@ import time
 
 
 root = tk.Tk()
-root.title("텍스트 RPG")
+root.title("this is untitled!")
 root.geometry("800x700")
 root.resizable(True, False)
 
@@ -102,7 +102,7 @@ def make_choices(*choices):
         button = tk.Button(
             button_frame,
             text=choice,
-            width=10,
+            width=20,
             height=2,
             font=("맑은 고딕", 10),
             command=lambda c=choice: choice_var.set(c)
@@ -121,11 +121,11 @@ def make_choices(*choices):
 def game_over(restart=None):
     button = tk.Button(
             button_frame,
-            text='game over',
-            width=10,
+            text='restart',
+            width=20,
             height=2,
             font=("맑은 고딕", 10),
-            command=root.destroy
+            command=tutorial
         )
     button.grid(row=0, column=0, padx=5, pady=5)
     choice_buttons.append(button)
@@ -161,13 +161,12 @@ def tutorial():
     say('what you need to do my friend, is to search \'Golden tooth\'')
     say('*you go to page 6.')
     say('Golden Tooth\n')
-
-    choice = make_choices("strong points", "hearing", "weak points", "seeing")
+    say('strongness: hearing')
+    say('weakness: seeing')
     say('okay then! now should prolly sneak in? i guess')
-    say(0,'(saved..)(if rejoined, not saved.)') #속도 0으로 출력
-    level += 1
 
     choice = make_choices("sneak in", "don\'t")
+
     say('ah no one cares what ya say ')
     say('                            ')
     say(0,'memorize the right path to not make a sound.')
@@ -182,8 +181,9 @@ def tutorial():
             say('hey didya make it?\nyes?\nok then')
             say('ok we escaped')
             say('OMG that must be!')
-            print('H.H.')
-            print('#will commit changes soon')
+            say(0,'H.H.')
+            say(0,'#will commit changes soon')
+            game_over()
         else:
             say('                                                       NOT SAFE')
             say('========================================================================')
